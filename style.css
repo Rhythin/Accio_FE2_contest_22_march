@@ -9,8 +9,11 @@ main{
     
 }
 
-footer {
-    
+button{
+    background-color: white;
+    height: 30px;
+    width: 150px;
+    margin-left: 50px;
 }
 
 .form {
@@ -32,7 +35,7 @@ footer {
 }
 
 .employee{
-
+    border: white 1px white;
     padding: 5px;
     border-radius: 10px;
     background-color: rebeccapurple;
