@@ -20,9 +20,13 @@ let arr = [
     let namestr=name.value
     let profession=document.getElementById("profession")
     let professionstr=profession.value
-    let age=document.getElementById("age").value
+    let age=document.getElementById("age")
     let agestr=age.value
 
+    if(namestr=="" || professionstr=="" || agestr==""){
+        alert("please enter name profession and age")
+        return
+    }
     let newemployee={ name:namestr, age:agestr, profession:professionstr }
     arr.push(newemployee)
 
@@ -38,7 +42,7 @@ let arr = [
     arr.forEach(element => {
         let li = document.createElement("li")    
 
-        li.textContent= "Name: "+element.name+"\t Profession: "+element.profession+"\t Age: "+element.age
+        li.textContent= "Name: "+element.name+" Profession: "+element.profession+" Age: "+element.age
         
         li.classList.add("employee")
         employees.appendChild(li)
