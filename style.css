@@ -32,6 +32,8 @@ button{
     flex-direction: column;
     flex-wrap: wrap;
     height: 70%;
+    gap: 5px;
+    align-items: flex-start;
 }
 
 .employee{
@@ -39,5 +41,13 @@ button{
     padding: 5px;
     border-radius: 10px;
     background-color: rebeccapurple;
-    height: 60px;
+    height: 40px;
+    margin: 10px;
+}
+
+.filterval {
+    margin-left: 50px;
+    height: 30px;
+    width: 150px;
+    background-color: white;
 }

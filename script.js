@@ -9,7 +9,9 @@ let arr = [
 
   const filterbutton= document.getElementById("filter")
   const addButton =document.getElementById("add")
+  const employees=document.getElementById("employees")
 
+  renderList(arr)
 
   addButton.addEventListener('click', addToArray)
 
@@ -25,4 +27,43 @@ let arr = [
     arr.push(newemployee)
 
     console.log(arr)
+    renderList(arr)
+  }
+
+  function renderList(arr){
+    while(employees.firstChild){
+        employees.removeChild(employees.firstChild)
+    }
+
+    arr.forEach(element => {
+        let li = document.createElement("li")    
+
+        li.textContent= "Name: "+element.name+"\t Profession: "+element.profession+"\t Age: "+element.age
+        
+        li.classList.add("employee")
+        employees.appendChild(li)
+    });
+  }
+
+
+  filterbutton.addEventListener('click', filter)
+
+  function filter(){
+    let filterselecction=document.getElementById("filterval")
+    let needed=filterselecction.value
+    if(needed==""){
+        renderList(arr)
+        return
+    }
+
+    console.log(needed)
+    arrFiltered= arr.filter( employee=> {
+        console.log(employee.profession)
+        if(employee.profession === needed){
+            return employee
+        }
+    })
+
+    console.log(arrFiltered)
+    renderList(arrFiltered)
   }
