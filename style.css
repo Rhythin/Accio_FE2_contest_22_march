@@ -1,0 +1,40 @@
+body {
+    box-sizing: border-box;
+    background-color: #1E1E1E;
+    color: white
+}
+
+main{
+    overflow:auto
+    
+}
+
+footer {
+    
+}
+
+.form {
+    display: flex;
+    padding: 20px;
+}
+.formfield {
+    display: flex;
+    width: 30%;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.employees {
+    display: flexbox;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 70%;
+}
+
+.employee{
+
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rebeccapurple;
+    height: 60px;
+}
