@@ -21,7 +21,7 @@ let arr = [
     let profession=document.getElementById("profession")
     let professionstr=profession.value
     let age=document.getElementById("age")
-    let agestr=age.value
+    let agestr=age.value //why does this become undefined when deployed
 
     if(namestr=="" || professionstr=="" || agestr==""){
         alert("please enter name profession and age")
